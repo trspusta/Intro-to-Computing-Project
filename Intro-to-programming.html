@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <title>Length Converter</title>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <ul>
+        <li><a href="#home">Asignment 1</a></li>
+        <li><a href="#news">Asignment 2</a></li>
+        <li><a href="#contact">Asignment 3</a></li>
+        <li><a href="#about">Asignment 4</a></li>
+      </ul>
+<h1>Assignment #1 - Conversion (Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, Feet to Meters)</h1>
+<!-- Meters to Feet -->
+
+<h2>Feet to Meters Length Converter</h2>
+
+<p>
+  <label>Feet</label>
+  <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter1(this.value)" onchange="LengthConverter1(this.value)">
+</p>
+<p>Feet: <span id="outputFeet"></span></p>
+<p>
+    <label>Meters</label>
+    <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+  </p>
+  <p>Meter: <span id="outputMeters"></span></p>
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+  
+}
+function LengthConverter1(valNum) {
+  document.getElementById("outputFeet").innerHTML=valNum*3.2808;
+}
+</script>
+</body>
+</html>
